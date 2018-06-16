@@ -17,7 +17,7 @@ pip install ktis-parser
 after then
 
 ```python
-from ktis_parser import *
+from ktis_parser.ktis_parser import *
 
 print(parseInfoFromKTIS("2017XXXX","password"))
 
