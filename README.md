@@ -17,7 +17,7 @@ pip install ktis-parser
 after then
 
 ```python
-from ktis-parser import *
+from ktis_parser import *
 
 print(parseInfoFromKTIS("2017XXXX","password"))
 
@@ -42,7 +42,7 @@ it return when, successful.
    }
 }
 ```
-then fail case
+then fail caseㄴ
 ```json
 {
   "status": "False",
