@@ -19,40 +19,40 @@ after then
 ```python
 from ktis-parser import *
 
-print(parseInfoFromKTIS('2017XXXX','password'))
+print(parseInfoFromKTIS("2017XXXX","password"))
 
 ```
 
 it return when, successful.
 ```json
 {
-  'status': True,
-  'content': {
-      'id': '2017XXXX',
-      'name': '{YOUR_NAME}',
-      'ssn': '{YOUR_SOCIAL_SECURITY_NUMBER}',
-      'college': '{YOUR_COLLEGE}',
-      'school': '{YOUR_SCHOOL}',
-      'time': '{YOUR_TIME}',
-      'major': '{YOUR_MAJOR}',
-      'date': '{YOUR_IN_DATE}',
-      'status': '{YOUR_STATUS}',
-      'grade': '{YOUR_GRADE}',
-      'passwd': '{YOUR_PASSWORD}'
+  "status": "True",
+  "content": {
+      "id": "2017XXXX",
+      "name": "{YOUR_NAME}",
+      "ssn": "{YOUR_SOCIAL_SECURITY_NUMBER}",
+      "college": "{YOUR_COLLEGE}",
+      "school": "{YOUR_SCHOOL}",
+      "time": "{YOUR_TIME}",
+      "major": "{YOUR_MAJOR}",
+      "date": "{YOUR_IN_DATE}",
+      "status": "{YOUR_STATUS}",
+      "grade": "{YOUR_GRADE}",
+      "passwd": "{YOUR_PASSWORD}"
    }
 }
 ```
 then fail case
 ```json
 {
-  'status': False,
-  'content': '존재하지 않는 사용자입니다.'
+  "status": "False",
+  "content": "존재하지 않는 사용자입니다."
 }
 ```
 
 ```json
 {
-  'status': False,
-  'content': '비밀번호가 맞지않습니다\\r\\n비밀번호 입력오류 횟수 : (2 / 5)'
+  "status": "False",
+  "content": "비밀번호가 맞지않습니다\\r\\n비밀번호 입력오류 횟수 : (2 / 5)"
 }
 ```
