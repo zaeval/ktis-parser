@@ -23,7 +23,7 @@ print(parseInfoFromKTIS("2017XXXX","password"))
 
 ```
 
-it return when, successful.
+it is return when, successful.
 ```json
 {
   "status": "True",
@@ -42,7 +42,7 @@ it return when, successful.
    }
 }
 ```
-then fail caseㄴ
+then fail case
 ```json
 {
   "status": "False",
