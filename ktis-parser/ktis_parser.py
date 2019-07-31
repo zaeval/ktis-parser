@@ -76,7 +76,7 @@ def parseSimpleGrade(st_id, st_passwd):
                     grade[key] = re.split(r"<*>", data[idx].get_text())[-1].strip()
                 grades.append(grade)
 
-            return {'status': True, 'content': {'total': total, 'info': info, 'grades': grades}}
+            return {'status': True, 'content': {'total': total, 'info': ret_info, 'grades': grades}}
 
         except Exception as e:
             return {'status': False, 'content': str(e)}
@@ -103,13 +103,16 @@ def parseDetailGrade(st_id, st_passwd, txt_year, txt_smt):
         for idx, data in enumerate(info):
             ret_info[info_keys[idx]] = data
 
-        ret_grads = []
+        ret_grades = []
         grades = grades[11:]
+        grade = {}
         for idx, data in enumerate(grades):
-            if idx % len()
-                pass
 
-
+            if idx % len(keys) == 0 and idx != 0:
+                ret_grades.append(grade)
+            else:
+                grade[keys[idx % len(keys)]] = data
+        return {'status': True, 'content': { 'info': ret_info, 'grades': ret_grades}}
 
 print(parseInfo(id, pwd))
 print(parseSimpleGrade(id, pwd))
