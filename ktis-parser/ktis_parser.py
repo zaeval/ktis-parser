@@ -114,6 +114,6 @@ def parseDetailGrade(st_id, st_passwd, txt_year, txt_smt):
                 grade[keys[idx % len(keys)]] = data
         return {'status': True, 'content': { 'info': ret_info, 'grades': ret_grades}}
 
-print(parseInfo(id, pwd))
-print(parseSimpleGrade(id, pwd))
-print(parseDetailGrade(id, pwd, 2017, 10))
+# print(parseInfo(id, pwd))
+# print(parseSimpleGrade(id, pwd))
+# print(parseDetailGrade(id, pwd, 2017, 10))
