@@ -16,7 +16,7 @@ def parseInfo(st_id, st_passwd):
 
     if idx == -1:
         res = ses.post(url + "/kmu/usa.Usa0209eFGet01.do", data={'ServiceID': st_id, 'pFolder': '학적시스템'})
-        bs = BeautifulSoup(res.text, "html5lib")
+        bs = BeautifulSoup(res.text, "lxml")
         td_content = bs.find_all('td', 'table_bg_white')
         default_info = {}
 
@@ -47,7 +47,7 @@ def parseSimpleGrade(st_id, st_passwd):
 
     if idx == -1:
         res = ses.post(url + '/kmu/usc.Usc0601qAGet01.do', data={'ServiceID': st_id})
-        bs = BeautifulSoup(res.text, "html5lib")
+        bs = BeautifulSoup(res.text, "lxml")
         info = bs.find_all('td', 'table_bg_white')
         simple_grade = bs.find_all('tr', 'table_bg_white')
         simple_total_grade = bs.find_all('td', 'table_color_bright')
@@ -93,7 +93,7 @@ def parseDetailGrade(st_id, st_passwd, txt_year, txt_smt):
     if idx == -1:
         res = ses.post(url + '/kmu/usc.Usc0601qAGet01_1.do', data={'arg_student_cd': st_id, "txt_year": 2017,
                                                                    "txt_smt": 10})
-        bs = BeautifulSoup(res.text, "html5lib")
+        bs = BeautifulSoup(res.text, "lxml")
         grades = bs.find_all('td', 'table_bg_white')
         grades = list(map(lambda content: re.split(r"<*>", content.get_text())[-1].strip(), grades))
 
