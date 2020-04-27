@@ -31,7 +31,7 @@ def parseInfo(st_id, st_passwd):
             if td_content != '':
                 default_info[key] = value
 
-        default_info['passwd'] = st_passwd
+        default_info['password'] = st_passwd
         return {'status': True, 'content': default_info}
 
     else:

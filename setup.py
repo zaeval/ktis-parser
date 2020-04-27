@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="ktis-parser",
-    version="0.3.0",
+    version="0.3.1",
     author="zaeval",
     author_email="zaeval@kookmin.ac.kr",
     description="ktis_parser default information parser",
